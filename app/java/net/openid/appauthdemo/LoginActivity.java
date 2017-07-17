@@ -441,7 +441,9 @@ public final class LoginActivity extends AppCompatActivity {
                 mClientId.get(),
                 ResponseTypeValues.CODE,
                 mConfiguration.getRedirectUri())
-                .setScope(mConfiguration.getScope());
+                .setScope(mConfiguration.getScope())
+                //FIXME: Comment the line below to try the alternative flow
+                .setAdditionalParameters(Collections.singletonMap("connection", "facebook"));
 
         if (!TextUtils.isEmpty(loginHint)) {
             authRequestBuilder.setLoginHint(loginHint);

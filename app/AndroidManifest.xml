@@ -62,14 +62,15 @@
 
         To the list of attributes on the activity element.
         -->
-        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
+        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            tools:node="replace">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="https"
-                  android:host="appauth.demo-app.io"
-                  android:path="/oauth2redirect"/>
+                  android:host="lucianop2.auth0.com"
+                  android:path="/callback"/>
             </intent-filter>
         </activity>
     </application>
